@@ -26,7 +26,7 @@ const css = () => {
         }))
         .pipe(concat("main.css"))
         .pipe(cssimport(cssimport))
-        .pipe(webpCss())
+        //.pipe(webpCss())
         .pipe(autoprefixer())
         .pipe(shorthand())
         .pipe(GroupCssMediaQueries())

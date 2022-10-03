@@ -1,19 +1,82 @@
-*{
-    box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-body{
+body {
+    background: url(../img/DSC_0146.jpg) no-repeat;
+    background-size: cover;
+}
+
+header {
+    background: linear-gradient(rgba(233, 225, 225, 0.5));
+    width: 75%;
+    height: auto;
+    margin-left: 12.5%;
+    margin-top: 85px;
+}
+
+.firstrow {
+    background: linear-gradient(rgba(233, 225, 225, 0.7));
+    width: auto;
+    height: auto;
+    margin-right: -12px;
+    margin-left: 14px;
+}
+.secondrow{
+    background: linear-gradient(rgba(233, 225, 225, 0.7));
+    width: auto;
+    height: auto;
+    margin-right: -12px;
+    margin-left: 14px;
+    margin-top: -3px;
+}
+
+.bi-bar-chart-fill {
+    margin-left: 20px;
+    color: chocolate;
+}
+
+.Shaperex {
+    color: rgb(71, 71, 71);
+    font-weight: 500;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.left_icons {
     font-size: 12px;
-    font-family: Arial;
-    line-height: 1.5;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
-@media(max-width: 700px){
-    body{
-        color: #fff;
-        background-color: #000;
-    }
+.topicons {
+    margin-left: -50px;
+    text-align: right;
+    padding: 10px;
+    font-size: 12px;
+    color: rgb(137, 137, 137);
 }
-
-@import "block/title.css";
-@import "block/news.css";
+.clearline{
+    background: linear-gradient(rgba(233, 225, 225, 0.0));
+    width: 200px;
+    height: 0.5px;
+    padding: 0;
+}
+.creditcard{
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 250px;
+    text-indent: 15px;
+}
+.visacard{
+background: rgb(88, 146, 247);
+height: 75px;
+width: 150px;
+margin-left: auto;
+margin-right: auto;
+}

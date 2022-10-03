@@ -1,27 +1,257 @@
-$base-font-size:22px;
-
-@mixin ph {
-    @media(max-width: 700px) {
-        @content;
-    }
-}
-
+$color: linear-gradient(rgba(255, 255, 255, 0.4));
+$blackcolor:rgb(73, 73, 73);
 * {
-    box-sizing: border-box;
+    font-family: Acrom-Regular;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
-
+@font-face {
+	font-family: Acrom-Regular;
+	src: url('..//font/Caviar_Dreams_Bold.ttf');
+}
 body {
-    font-size: $base-font-size;
-    font-family: 'Arial';
-    line-height: 1.5;
-    background-color: rgb(53, 187, 227);
-
-    @include ph() {
-        color: #fff;
-        background-color: rgb(157, 127, 127);
-    }
+    background: url(../img/photo_2022-09-13_10-55-29\ \(2\).jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+nav{
+    background: linear-gradient(rgba(255, 255, 255, 0.2));
+    height: 100vh;
+    width: 16vw;
+    position: fixed;
+}
+main {
+    position: absolute;
+    width: 84vw;
+    margin-left: 16vw;
+    background: $color;
+    margin-top: 6.8vh;
 }
 
+.firstrow {
+    background: $color;
+    width: 84vw;
+    height: 6.7vh;
+    position: fixed;
+    top: 0%;
+    left: 16vw;
+    z-index: 1;
+}
+.secondrow{
+    width: auto;
+    height: 37vw;
+}
+.thirdrow{
+    width: auto;
+    height: 39vw;
+}
 
+.smallrow{
+    height: 2vw;
+    width: auto;
+}
 
-@import "block/*.scss";
+.bi-bar-chart-fill {
+    margin-left: 20px;
+    color: chocolate;
+}
+
+.Shaperex {
+    color: rgb(71, 71, 71);
+    margin-top: 2vh;
+    font-size: 1.2vw;
+}
+
+.left_icons {
+    color: rgb(74, 74, 74);
+    font-size: 1vw;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 1vh;
+}
+
+.topicons {
+    margin-right: 20px;
+    text-align: right;
+    padding: 10px;
+    font-size: 1vw;
+    color: rgb(137, 137, 137);
+}
+.rectangle{
+    background: white;
+    width: 25vw;
+    height: 33vw;
+    position: absolute;
+    left: 3vw;
+}
+.lastrectangle{
+    background: white;
+    width: 23.5vw;
+    height: 33vw;
+    margin-top: 2vw;
+    position: absolute;
+    left: 57.5vw;
+}
+.smallrectangle{
+    background: white;
+    width: 23.5vw;
+    height: 15vw;
+    margin-top: 2vw;
+    position: absolute;
+    left: 31vw;
+}
+.graphback{
+    background: white;
+    width: 50vw;
+    height: 33vw;
+    position: absolute;
+    left: 31vw;
+}
+.visacard{
+background: rgb(88, 146, 247);
+height: 10vw;
+width: 21vw;
+margin-top: 2vw;
+margin-left: auto;
+margin-right: auto;
+border-radius: 2%;
+}
+
+.smallgreyline{
+    background: linear-gradient(rgb(156, 152, 152));
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5vw;
+    width: 21vw;
+    height: 0.6px;
+}
+.smalltext{
+    font-size:1vw ;
+    color: grey;
+    text-align: left;
+    margin-top: 0.7vw;
+    margin-left: 2vw;
+}
+.maintext{
+    color: $blackcolor;
+    font-size: 1.5vw;
+    margin-left: 2vw;
+}
+.bignumber{
+    margin-left:2vw ;
+    font-size: 2vw;
+    float: left;
+}
+.income{
+    float: right;
+    background: orange;
+    width: 8vw;
+    height: 5vw;
+    margin-right: 12px;
+    border-radius: 4%;
+}
+#arrow {
+    font-size: 4vw;
+    color: white;
+    display: flex;
+    margin-top: 0.7vw;
+    margin-left:2vw;
+}
+.calendar{
+    background: rgb(88, 146, 247);
+    width: 4vw;
+    height: 4vw;
+    margin-left: 1.5vw;
+    border-radius: 5%;
+}
+#calendar{
+    color: white;
+    font-size: 2.6vw;
+    margin-left: 0.7vw;
+    position: relative;
+    bottom: -0.4vh;
+}
+#calendartext{
+    margin-left: 6vw; 
+    display: flex; 
+    margin-top: -4vw;
+    font-size: 1.5vw;
+    color: $blackcolor;
+}
+#undercalendartext{
+    color: gray;
+    font-size: 1.1vw;
+    display: flex;
+    margin-left: 6vw;
+}
+.bi-three-dots-vertical{
+    float: right;
+    margin-top: -2vw;
+    margin-right: 4px;
+    font-size: 1.5vw;
+    color: gray;
+}
+.dashboard{
+    margin-top: 4vh;
+}
+.logout{
+    position: absolute;
+    bottom: 2vh;
+}
+.padding0{
+    padding-right: 0;
+    padding-left: 0;
+}
+#visaicon{
+    font-size: 2vw;
+    color: white;
+    margin-left: -0.1vw;
+    margin-top: -0.3vw;
+}
+.backvisaicon{
+    display: flex;
+    width: 2.3vw;
+    height: 1.5vw;
+    background: black;
+    margin-left: 1vw;
+    margin-top: -12px;
+}
+.cardnumber{
+    margin-left: 1vw;
+    color: white;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+}
+.cardinformation{
+    font-size:1.2vw ;
+    position: relative;
+    bottom: -0.5vw;
+    color: white;
+}
+#date{
+    float: left;
+    margin-left: 1vw;
+}
+#lastname{
+    float: right;
+    margin-right: 4vw;
+}
+.wave{
+    position:absolute ;
+    height: 10vw;
+}
+.rightwave{
+    position:absolute;
+    height: 10vw;
+    margin-left: -24vw;
+    transform: scaleX(-1);
+}
+.clearvisa{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 6.5vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+}

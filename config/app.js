@@ -5,9 +5,6 @@ module.exports = {
 
     pug: {
             pretty: true,
-            data: {
-                news: require('../data/news.json')
-            }
         },
 
         webpack:{

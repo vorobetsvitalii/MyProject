@@ -57,5 +57,8 @@
     "webpack": "^5.74.0",
     "webpack-stream": "^7.0.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1"
+  }
 }
