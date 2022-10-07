@@ -1,13 +1,13 @@
 $color: linear-gradient(rgba(255, 255, 255, 0.4));
 $blackcolor:rgb(73, 73, 73);
 * {
-    font-family: Acrom-Regular;
+    font-family: Caviar_Dreams_Bold;
     margin: 0;
     padding: 0;
     border: 0;
 }
 @font-face {
-	font-family: Acrom-Regular;
+	font-family: Caviar_Dreams_Bold;
 	src: url('..//font/Caviar_Dreams_Bold.ttf');
 }
 body {
@@ -19,6 +19,7 @@ nav{
     height: 100vh;
     width: 16vw;
     position: fixed;
+    z-index: 1;
 }
 main {
     position: absolute;
@@ -27,9 +28,12 @@ main {
     background: $color;
     margin-top: 6.8vh;
 }
-
+a{
+    text-decoration: none;
+    color: $blackcolor;
+}
 .firstrow {
-    background: $color;
+    background: rgb(232, 232, 232);
     width: 84vw;
     height: 6.7vh;
     position: fixed;
@@ -67,9 +71,8 @@ main {
     font-size: 1vw;
     font-weight: 500;
     margin-left: 20px;
-    margin-top: 1vh;
+    padding: 0.5vh;
 }
-
 .topicons {
     margin-right: 20px;
     text-align: right;
@@ -109,12 +112,13 @@ main {
 }
 .visacard{
 background: rgb(88, 146, 247);
-height: 10vw;
+height: 11vw;
 width: 21vw;
 margin-top: 2vw;
 margin-left: auto;
 margin-right: auto;
 border-radius: 2%;
+z-index: -1;
 }
 
 .smallgreyline{
@@ -187,7 +191,7 @@ border-radius: 2%;
 .bi-three-dots-vertical{
     float: right;
     margin-top: -2vw;
-    margin-right: 4px;
+    margin-right: 0.6vw;
     font-size: 1.5vw;
     color: gray;
 }
@@ -225,7 +229,7 @@ border-radius: 2%;
 .cardinformation{
     font-size:1.2vw ;
     position: relative;
-    bottom: -0.5vw;
+    bottom: -1.5vw;
     color: white;
 }
 #date{
@@ -238,13 +242,14 @@ border-radius: 2%;
 }
 .wave{
     position:absolute ;
-    height: 10vw;
+    height: 11vw;
 }
 .rightwave{
     position:absolute;
-    height: 10vw;
-    margin-left: -24vw;
+    height: 11vw;
+    margin-left: -28vw;
     transform: scaleX(-1);
+    z-index: 0;
 }
 .clearvisa{
     position: absolute;
