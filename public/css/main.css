@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   font-family: Caviar_Dreams_Bold;
   margin: 0;
@@ -27,7 +29,7 @@ nav {
 
 main {
   position: absolute;
-  width: 84vw;
+  width: 82.9vw;
   margin-left: 16vw;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)));
   background: -o-linear-gradient(rgba(255, 255, 255, 0.4));
@@ -45,8 +47,8 @@ a {
   width: 84vw;
   height: 6.7vh;
   position: fixed;
-  top: 0%;
-  left: 16vw;
+  top: 0;
+  left: 15vw;
   z-index: 1;
 }
 
@@ -97,7 +99,7 @@ a {
   width: 25vw;
   height: 33vw;
   position: absolute;
-  left: 3vw;
+  left: 2vw;
 }
 
 .lastrectangle {
@@ -106,7 +108,7 @@ a {
   height: 33vw;
   margin-top: 2vw;
   position: absolute;
-  left: 57.5vw;
+  left: 56.5vw;
 }
 
 .smallrectangle {
@@ -115,7 +117,7 @@ a {
   height: 15vw;
   margin-top: 2vw;
   position: absolute;
-  left: 31vw;
+  left: 30vw;
 }
 
 .graphback {
@@ -123,7 +125,7 @@ a {
   width: 50vw;
   height: 33vw;
   position: absolute;
-  left: 31vw;
+  left: 30vw;
 }
 
 .visacard {
@@ -307,4 +309,127 @@ a {
   color: rgba(255, 255, 255, 0.1);
   margin-top: 2vw;
   margin-left: 2vw;
+}
+
+progress {
+  height: 0.2vw;
+  margin-top: 17vw;
+  position: absolute;
+  left: 30vw;
+  width: 23.5vw;
+}
+
+/* месяцы и годы */
+
+#month-calendar {
+  width: 100%;
+}
+
+.month {
+  margin: 0;
+  padding: 2rem 2rem 2rem;
+  text-align: center;
+  width: 100%;
+  color: grey;
+  list-style: none;
+}
+
+.month li {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+.month li.prev,
+.month li.next {
+  cursor: pointer;
+}
+
+.month li.prev {
+  float: left;
+}
+
+.month li.next {
+  float: right;
+}
+
+.month li.year-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* дни недели */
+
+.weekdays {
+  margin: 0;
+  padding: 0rem 1rem 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  color: grey;
+}
+
+.weekdays li {
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 14.2857142857%;
+  flex: 0 0 14.2857142857%;
+  text-align: center;
+}
+
+/* дни */
+
+.days {
+  margin: 0;
+  padding: 1rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  height: 14rem;
+}
+
+.days li {
+  padding: 0.8rem;
+  list-style: none;
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 14.2857142857%;
+  flex: 0 0 14.2857142857%;
+  text-align: center;
+  color: grey;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.days li.date-now {
+  color: #000;
+}
+
+.year-name {
+  display: none;
+}
+
+.next {
+  color: orange;
 }

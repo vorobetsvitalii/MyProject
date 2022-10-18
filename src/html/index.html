@@ -21,7 +21,7 @@
         </div>
         <div class="left_icons">
             <div class="dashboard" >
-                <a href="dashboard.html">
+                <a href="index.html">
                 <i class="bi-grid"></i>
                 Dashboard</a>
             </div>
@@ -158,10 +158,11 @@
                                 <div class="income">
                                     <i class="bi-arrow-down" id="arrow"></i>
                                 </div>
-                                <div class="smalltext" style="margin-top: 4px; margin-left: 2vw;float: left;">
+                                <div class="smalltext" style="margin-top: 0.4vw; margin-left: 2vw;float: left;">
                                   Today Income
-                                </div>
-                            </div>
+                                </div>                          
+                            </div>                              
+                            <progress value="70" max="100"  id="todayIncome"></progress>
                             <div class="smallrectangle" style="margin-top: 20vw;">
                                 <br>
                                 <div class="maintext" >
@@ -191,6 +192,32 @@
                             <span id="calendartext">Calendar</span>
                             <span id="undercalendartext">March 26, 2018</span>
                             <i class="bi-three-dots-vertical"></i>
+                            <div id="month-calendar">
+                                <!-- Блок с заголовками (наименования месяца и года) и навигацией (на месяц вперед и назад) -->
+                                <ul class="month">
+                                    <li class="prev"><i class="bi bi-chevron-left"></i></li>
+                                    <li class="next"><i class="bi bi-chevron-right"></i></li>
+                                    <li class="month-name"></li>
+                                    <li class="year-name"></li>
+                                </ul>
+                                 <!-- Блок с наименования дней недели, начинается с понедельника (Пн) -->
+                                <ul class="weekdays">
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                    <li>Sun</li>
+                                </ul>
+                                <!-- табличная часть, дни месяца -->
+                                <ul class="days">
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>...</li>
+                                    <li>31</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ nav{
 }
 main {
     position: absolute;
-    width: 84vw;
+    width: 82.9vw;
     margin-left: 16vw;
     background: $color;
     margin-top: 6.8vh;
@@ -37,8 +37,8 @@ a{
     width: 84vw;
     height: 6.7vh;
     position: fixed;
-    top: 0%;
-    left: 16vw;
+    top: 0;
+    left: 15vw;
     z-index: 1;
 }
 .secondrow{
@@ -85,7 +85,7 @@ a{
     width: 25vw;
     height: 33vw;
     position: absolute;
-    left: 3vw;
+    left: 2vw;
 }
 .lastrectangle{
     background: white;
@@ -93,7 +93,7 @@ a{
     height: 33vw;
     margin-top: 2vw;
     position: absolute;
-    left: 57.5vw;
+    left: 56.5vw;
 }
 .smallrectangle{
     background: white;
@@ -101,14 +101,14 @@ a{
     height: 15vw;
     margin-top: 2vw;
     position: absolute;
-    left: 31vw;
+    left: 30vw;
 }
 .graphback{
     background: white;
     width: 50vw;
     height: 33vw;
     position: absolute;
-    left: 31vw;
+    left: 30vw;
 }
 .visacard{
 background: rgb(88, 146, 247);
@@ -259,4 +259,104 @@ z-index: -1;
     margin-left: 2vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 900;
+}
+progress{
+    height: 0.2vw;
+    margin-top: 17vw;
+    position: absolute;
+    left: 30vw;
+    width: 23.5vw;
+}
+
+/* месяцы и годы */
+#month-calendar{
+    width: 100%;
+}
+
+.month{
+    margin: 0;
+    padding: 2rem 2rem 2rem;
+    text-align: center;
+    width: 100%;
+    color: grey;
+    list-style: none;
+}
+
+.month li{
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+.month li.prev,
+.month li.next{
+    cursor: pointer;
+}
+
+.month li.prev{
+    float: left;
+}
+
+.month li.next{
+    float: right;
+}
+
+.month li.year-name{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* дни недели */
+.weekdays{
+    margin: 0;
+    padding: 0rem 1rem 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    color: grey;
+}
+
+.weekdays li{
+    display: inline-block;
+    flex: 0 0 calc(100% / 7);
+    text-align: center;
+}
+
+/* дни */
+.days{
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-content: flex-start;
+    height: 14rem;
+    
+}
+
+.days li{
+    padding: 0.8rem;
+    list-style: none;
+    display: inline-block;
+    flex: 0 0 calc(100% / 7);
+    text-align: center;
+    color: grey;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.days li.date-now{
+    color: #000;
+}
+.year-name{
+    display: none;
+}
+.next{
+    color: orange;
 }
