@@ -44,11 +44,11 @@ a {
 
 .firstrow {
   background: rgb(232, 232, 232);
-  width: 84vw;
+  width: 83vw;
   height: 6.7vh;
   position: fixed;
   top: 0;
-  left: 15vw;
+  left: 16vw;
   z-index: 1;
 }
 
@@ -89,7 +89,7 @@ a {
 .topicons {
   margin-right: 20px;
   text-align: right;
-  padding: 10px;
+  padding: 0.6vw;
   font-size: 1vw;
   color: rgb(137, 137, 137);
 }
@@ -151,10 +151,10 @@ a {
 }
 
 .smalltext {
-  font-size: 1vw;
+  font-size: 1.1vw;
   color: grey;
+  padding: 0.5vw;
   text-align: left;
-  margin-top: 0.7vw;
   margin-left: 2vw;
 }
 
@@ -165,6 +165,7 @@ a {
 }
 
 .bignumber {
+  margin-top: 3vw;
   margin-left: 2vw;
   font-size: 2vw;
   float: left;
@@ -173,19 +174,20 @@ a {
 .income {
   float: right;
   background: orange;
-  width: 8vw;
-  height: 5vw;
-  margin-right: 12px;
+  width: 7vw;
+  height: 4.3vw;
+  margin-top: 3.4vw;
+  margin-right: 2.1vw;
   border-radius: 4%;
 }
 
 #arrow {
-  font-size: 4vw;
+  font-size: 3vw;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0.7vw;
+  margin-top: 0.8vw;
   margin-left: 2vw;
 }
 
@@ -206,7 +208,7 @@ a {
 }
 
 #calendartext {
-  margin-left: 6vw;
+  margin-left: 7vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,13 +223,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 6vw;
+  margin-left: 7vw;
 }
 
 .bi-three-dots-vertical {
   float: right;
-  margin-top: -2vw;
-  margin-right: 0.6vw;
+  margin-top: -3vw;
+  margin-right: 1.2vw;
   font-size: 1.5vw;
   color: gray;
 }
@@ -313,21 +315,19 @@ a {
 
 progress {
   height: 0.2vw;
-  margin-top: 17vw;
   position: absolute;
   left: 30vw;
   width: 23.5vw;
 }
 
-/* месяцы и годы */
-
-#month-calendar {
-  width: 100%;
+#monthlysale::-webkit-progress-value {
+  margin-top: 17vw;
+  background: orange;
 }
 
 .month {
   margin: 0;
-  padding: 2rem 2rem 2rem;
+  padding: 3vw 2vw 2.5vw;
   text-align: center;
   width: 100%;
   color: grey;
@@ -337,7 +337,7 @@ progress {
 .month li {
   padding: 0;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2vw;
   line-height: 1.4;
   letter-spacing: 0.1rem;
   font-weight: 700;
@@ -346,6 +346,8 @@ progress {
 .month li.prev,
 .month li.next {
   cursor: pointer;
+  margin-left: -0.6vw;
+  margin-right: -0.6vw;
 }
 
 .month li.prev {
@@ -356,16 +358,12 @@ progress {
   float: right;
 }
 
-.month li.year-name {
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-/* дни недели */
+/* дні тижня */
 
 .weekdays {
   margin: 0;
-  padding: 0rem 1rem 1rem;
+  font-size: 1vw;
+  padding: 0vw 1vw 1vw;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,13 +386,14 @@ progress {
   -ms-flex: 0 0 14.2857142857%;
   flex: 0 0 14.2857142857%;
   text-align: center;
+  font-size: 1vw;
 }
 
-/* дни */
+/* днi */
 
 .days {
   margin: 0;
-  padding: 1rem 0;
+  padding: 1vw 0.6vw;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,11 +405,11 @@ progress {
   justify-content: left;
   -ms-flex-line-pack: start;
   align-content: flex-start;
-  height: 14rem;
+  height: 14vw;
 }
 
 .days li {
-  padding: 0.8rem;
+  padding: 0.8vw 1vw 0.9vw 0.5vw;
   list-style: none;
   display: inline-block;
   -webkit-box-flex: 0;
@@ -418,12 +417,15 @@ progress {
   flex: 0 0 14.2857142857%;
   text-align: center;
   color: grey;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1vw;
+  line-height: 1vw;
 }
 
 .days li.date-now {
-  color: #000;
+  color: white;
+  width: 13vw !important;
+  border-radius: 50%;
+  background: orange;
 }
 
 .year-name {
@@ -432,4 +434,37 @@ progress {
 
 .next {
   color: orange;
+}
+
+.graph {
+  width: 90%;
+  height: 25vw;
+  margin-top: 2vw;
+  margin-left: 4%;
+}
+
+#graphLineYear {
+  margin-left: 25vw;
+  font-size: 1.5vw;
+}
+
+.graphdoughnut {
+  height: 18vw;
+  width: 12vw;
+  margin-left: 6.5vw;
+  margin-top: -1vw;
+}
+
+.smallEarningText {
+  font-size: 0.9vw;
+  color: rgb(75, 75, 75);
+  float: right;
+  margin-right: 3vw;
+}
+
+.earningpercent {
+  position: absolute;
+  font-size: 2.5vw;
+  margin-left: 10.4vw;
+  margin-top: 6.2vw;
 }

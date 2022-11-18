@@ -1,3 +1,22 @@
-{
-    "todaiIncome": 10
-}
+[
+    {
+        "monthlySale": 10,
+        "yearlySale": 20,
+        "jan": 220,
+        "feb": 160,
+        "mar": 180,
+        "apr": 210,
+        "may": 250,
+        "jun": 240,
+        "jul": 220,
+        "aug": 190,
+        "sep": 170,
+        "oct": 170,
+        "nov": 190,
+        "dec": 300,
+        "GreenPart": 220,
+        "BluePart": 160,
+        "GreyPart": 300,
+        "orangePart": 180
+    }
+]

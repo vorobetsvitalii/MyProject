@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/mainmin.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <title>MyProject</title>
 </head>
 
@@ -66,12 +67,12 @@
     <header>
             <div class="firstrow">
                 <div class="topicons">
-                    <i class="bi-search"></i>
+                    <i class="bi-search" ></i>
                     <i style="margin-left:20px ;" class="bi-bell"></i>
                     <sup style="margin-right:13px ;">24</sup>
                     <i class="bi-envelope"></i>
                     <sup>5</sup>
-                    <img style="margin-left:25px; margin-right: 4px; width: 30px;" src="..//img/1830_oooo.plus.png">
+                    <img style="margin-left:25px; margin-right: 4px; width: 2vw;" src="..//img/1830_oooo.plus.png">
                     <i class="bi bi-chevron-down"></i>
                 </div>
             </div>
@@ -88,7 +89,7 @@
                             <div class="visacard">
                                 <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="0.1" d="M0,64L60,101.3C120,139,240,213,360,250.7C480,288,600,288,720,266.7C840,245,960,203,1080,192C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>                              
                                 <svg class="rightwave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="0.1" d="M0,64L60,101.3C120,139,240,213,360,250.7C480,288,600,288,720,266.7C840,245,960,203,1080,192C1200,181,1320,203,1380,213.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> 
-                                <span class="clearvisa">VISA</span>
+                                <span class="clearvisa click">VISA</span>
                                 <br>
                                 <div class="backvisaicon">
                                     <i class="fa fa-cc-visa" aria-hidden="true" id="visaicon"></i>
@@ -102,15 +103,15 @@
                                 </div>
                             </div>
                             <div class="smallgreyline"></div>
-                            <div class="smalltext" style="margin-top:3vw;">Card number:
+                            <div class="smalltext smallcardtext" style="margin-top:3vw;">Card number:
                                 <span style="font-size:0.8vw ; color: rgb(75, 75, 75); margin-left: 2vw;">2450 25412
                                     24215</span>
                             </div>
-                            <div class="smalltext">Account Name:
+                            <div class="smalltext smallcardtext">Account Name:
                                 <span style="font-size:0.8vw ; color: rgb(75, 75, 75); margin-left: 1.3vw;">Sabush
                                     Chandra</span>
                             </div>
-                            <div class="smalltext">Card status:
+                            <div class="smalltext smallcardtext">Card status:
                                 <span style="font-size:0.8vw  ; color: rgb(75, 75, 75); margin-left: 12%;">Active</span>
                             </div>
                         </div>
@@ -121,10 +122,14 @@
                         <div class="smallrow"></div>
                         <div class="graphback">
                             <br>
-                            <div class="maintext">Statistic </div>
-                            <div>
-                                <canvas id="myChart"></canvas>
-                              </div>
+                            <div class="maintext">Statistic   
+                                <span id="graphLineYear">2018
+                                <i class="bi bi-chevron-down"></i>
+                                Month
+                                <i class="bi bi-chevron-down"></i>
+                                </span>
+                            </div>
+                                <div class="graph"><canvas class="graphline" id="graphline"></canvas></div>
                         </div>
                         <div class="smallrow"></div>
                     </div>
@@ -138,6 +143,18 @@
                             <br>
                             <div class="maintext">
                                 Earning in month
+                            </div>
+                            <div class="earningpercent">75%</div>
+                            <div class="graphdoughnut"><canvas class="doughnut"></canvas></div>
+                            <div class="smallgreyline" style="margin-top: -0.5vw;"></div>
+                            <div class="smalltext" style="margin-top:2.5vw;">Deposit:
+                                <span class="smallEarningText">$20 541 875 574</span>
+                            </div>
+                            <div class="smalltext">Expese:
+                                <span class="smallEarningText">$541 875 574</span>
+                            </div>
+                            <div class="smalltext">payable:
+                                <span class="smallEarningText">$805 875 574</span>
                             </div>
                         </div>
                     </div>
@@ -161,8 +178,8 @@
                                 <div class="smalltext" style="margin-top: 0.4vw; margin-left: 2vw;float: left;">
                                   Today Income
                                 </div>                          
-                            </div>                              
-                            <progress value="70" max="100"  id="todayIncome"></progress>
+                            </div>               
+                            <progress id="monthlysale" value="70" max="100" title="70"></progress>
                             <div class="smallrectangle" style="margin-top: 20vw;">
                                 <br>
                                 <div class="maintext" >
@@ -179,7 +196,8 @@
                                 <div class="smalltext" style="margin-top: 4px;float: left;">Today
                                     Income</div>
                             </div>
-                        </div>
+                            <progress id="greenprogress" value="70" max="100" style="margin-top: 35vw;"></progress> 
+                         </div>
                     </div>
                 </div>
                 <div class="col-4 ">
@@ -193,14 +211,12 @@
                             <span id="undercalendartext">March 26, 2018</span>
                             <i class="bi-three-dots-vertical"></i>
                             <div id="month-calendar">
-                                <!-- Блок с заголовками (наименования месяца и года) и навигацией (на месяц вперед и назад) -->
                                 <ul class="month">
                                     <li class="prev"><i class="bi bi-chevron-left"></i></li>
                                     <li class="next"><i class="bi bi-chevron-right"></i></li>
                                     <li class="month-name"></li>
                                     <li class="year-name"></li>
                                 </ul>
-                                 <!-- Блок с наименования дней недели, начинается с понедельника (Пн) -->
                                 <ul class="weekdays">
                                     <li>Mon</li>
                                     <li>Tue</li>
@@ -210,7 +226,6 @@
                                     <li>Sat</li>
                                     <li>Sun</li>
                                 </ul>
-                                <!-- табличная часть, дни месяца -->
                                 <ul class="days">
                                     <li>1</li>
                                     <li>2</li>
@@ -228,7 +243,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/chart.js@3.5.0/dist/chart.min.js"></script> 
         <script src="js/main.js"></script>
+        <script src="js/jQuery.js"></script>
 </body>
 
 </html>
