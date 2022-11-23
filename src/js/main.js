@@ -77,15 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
     gradientBG.addColorStop(0.5, 'rgba(231, 234, 34, 0.1)');
     gradientBG.addColorStop(0, 'rgba(255, 165, 0, 0.1)');
     gradientBG.addColorStop(1, 'rgba(255, 0, 0, 0.1)');
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/income.json', true);
+    /*var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'income.json', true);
     xhr.onload = function(){
         if(this.status == 200){
             console.log('sds');
         }
         console.log('sds');
-    }
-    new Chart(
+    }*/
+   new Chart(
         document.querySelector('.graphline'),
         {
             type: 'line', // изменили тип графика
@@ -176,12 +176,11 @@ function setmonthlysale(value) {
 
   function getdata(){
     $.ajax({
-        url: '/json/income.json',
+        url: "https://jsonplaceholder.typicode.com/todos",
         method: "GET"
     }).done(function(data){
-        console.log(data.monthlySale)
+        setgreenprogress(data[74].id);
+        setmonthlysale(data[9].id);
     })
   }
   getdata();
-  setgreenprogress(75);
-  setmonthlysale(95);
