@@ -179,8 +179,8 @@ function setmonthlysale(value) {
         url: "https://jsonplaceholder.typicode.com/todos",
         method: "GET"
     }).done(function(data){
-        setgreenprogress(data[74].id);
-        setmonthlysale(data[9].id);
+        setgreenprogress(data[94].id);
+        setmonthlysale(data[39].id);
     })
   }
   getdata();
